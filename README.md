@@ -12,7 +12,7 @@ Run the command below to set it up
 npx @kamranahmedse/claude-statusline
 ```
 
-It backups your old status line if any and copies the status line script to `~/.claude/statusline.sh` and configures your Claude Code settings.
+It backups your old status line if any and copies the status line script to `~/.claude/statusline.sh` (or `statusline.ps1` on Windows) and configures your Claude Code settings. Platform detection is automatic — use the same `npx` command on all platforms.
 
 ## Requirements
 
@@ -25,6 +25,16 @@ On macOS:
 ```bash
 brew install jq
 ```
+
+On Windows (PowerShell 7+ required):
+
+```
+winget install jqlang.jq
+winget install Git.Git
+winget install Microsoft.PowerShell
+```
+
+After installing, restart your terminal so `jq`, `git`, and `pwsh` are available on PATH.
 
 ## Uninstall
 
